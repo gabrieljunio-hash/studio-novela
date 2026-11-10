@@ -1,0 +1,27 @@
+{
+  "episode": "EP001",
+  "title": "O Último Ovo",
+  "duration_seconds": 90,
+  "fps": 30,
+  "resolution": [1080, 1920],
+  "style": "stylized_game_3d",
+  "camera_rule": "father_pov_only",
+  "scenes": [
+    {"id":"S01","start":0,"end":12,"location":"kitchen","characters":["mother","teen_son"],"father_visible":"hands_and_legs_only","voice":["father_narrator"],"props":["egg","frying_pan","fridge","table"],"mood":"emotional_hook"},
+    {"id":"S02","start":12,"end":22,"location":"kitchen_door","characters":["mother","teen_son"],"father_visible":"hands_only","voice":["mother","teen_son","father_narrator"],"props":["water_bottle"],"mood":"family"},
+    {"id":"S03","start":22,"end":32,"location":"community_street","characters":[],"father_visible":"arms_and_legs_pov","voice":["father_narrator"],"props":["street_environment"],"mood":"determined"},
+    {"id":"S04","start":32,"end":47,"location":"construction_site","characters":["foreman","older_worker"],"father_visible":"hands_and_legs_pov","voice":["foreman","father"],"props":["shovel","wheelbarrow","bucket"],"mood":"hope"},
+    {"id":"S05","start":47,"end":60,"location":"construction_site","characters":["older_worker","background_workers"],"father_visible":"hands_and_legs_pov","voice":["older_worker","father"],"props":["cement_bag","tools"],"mood":"light_humor"},
+    {"id":"S06","start":60,"end":73,"location":"site_lunch_area","characters":["older_worker","background_workers"],"father_visible":"hands_only_pov","voice":["older_worker","background_worker","father_narrator"],"props":["lunchboxes","bench"],"mood":"suspense"},
+    {"id":"S07","start":73,"end":90,"location":"site_lunch_area","characters":["older_worker"],"father_visible":"hands_only_pov","voice":["older_worker","father_narrator"],"props":["backpack","closed_lunchbox"],"mood":"cliffhanger"}
+  ],
+  "voice_profiles": {
+    "father_narrator":"adult Brazilian Portuguese male, natural, tired but steady",
+    "mother":"adult Brazilian Portuguese female, warm and concerned",
+    "teen_son":"Brazilian Portuguese teenage male, sincere and restrained",
+    "ze":"older Brazilian Portuguese male, slightly raspy and direct",
+    "foreman":"adult Brazilian Portuguese male, practical and hurried"
+  },
+  "ending": "cut_before_father_answers",
+  "next_episode_continuity": "EP002 opens on the exact confrontation frame"
+}
