@@ -1,7 +1,7 @@
 # EP001 — O ÚLTIMO OVO
 Status: roteiro-base para produção
 Formato: vertical 1080x1920, 30 fps, 90 segundos
-Estilo: personagens 3D de game estilizado; cenários simples e reutilizáveis
+Estilo: animação 2D ilustrada, personagens vetoriais com contornos marcados e cenários em camadas
 Câmera: pai sempre em primeira pessoa (POV). Nunca mostrar o pai de corpo inteiro nem seu rosto.
 
 ## Premissa
@@ -69,7 +69,7 @@ A família está sem dinheiro. O pai sai para procurar trabalho numa obra. Conse
 - Evitar vozes caricatas, sotaques forçados ou dramatização excessiva.
 - Pausas naturais entre falas. Não sobrepor diálogos. Música baixa para não competir com a voz.
 
-## Cenários reutilizáveis
+## Direção visual 2D\n- Personagens desenhados em 2D, com expressões simples e silhuetas consistentes.\n- Cenários construídos em camadas para permitir movimentos de câmera, parallax e pequenas animações.\n- Movimentos econômicos: piscar, respirar, gesticular, caminhar com ciclos curtos e movimentos de mãos em POV.\n- Manter paleta terrosa, contorno escuro e iluminação simples; evitar aparência de apresentação de slides.\n\n## Cenários reutilizáveis
 1. Cozinha modesta: geladeira, mesa, fogão, frigideira, uma janela e porta.
 2. Rua da comunidade: casas próximas, calçada irregular, postes e fios; sem excesso de elementos.
 3. Canteiro de obras: estrutura de concreto, pilhas de material, carrinho, pá, baldes, bancada de almoço.
