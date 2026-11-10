@@ -1,4 +1,4 @@
-name: Build Studio ZIP
+name: Test and Package Studio Novela
 
 on:
   push:
@@ -9,19 +9,41 @@ permissions:
   contents: read
 
 jobs:
-  package:
+  validate-render-package:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: Baixar projeto
         uses: actions/checkout@v4
-      - name: Gerar ZIP
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Verificar TypeScript
+        run: npm run check
+
+      - name: Renderizar protótipo
+        run: npm run render
+
+      - name: Gerar ZIP do projeto
+        if: success()
         run: |
           mkdir -p dist
           zip -r dist/studio-novela-v0.2.zip . \
-            -x ".git/*" "node_modules/*" "dist/*"
-      - name: Publicar ZIP
+            -x ".git/*" "node_modules/*" "dist/*" "out/*"
+
+      - name: Guardar ZIP e vídeo renderizado
+        if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: studio-novela-v0.2
-          path: dist/studio-novela-v0.2.zip
+          name: studio-novela-prototipo-v0.2
+          path: |
+            dist/studio-novela-v0.2.zip
+            out/prototipo-pov.mp4
           retention-days: 30
