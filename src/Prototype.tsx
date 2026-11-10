@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Audio, Easing, interpolate, staticFile, useCurrentFrame } from "remotion";
+import { AbsoluteFill, Audio, interpolate, staticFile, useCurrentFrame } from "remotion";
 
 const C = {
   ink: "#30251f", skin: "#b97859", skin2: "#d69a78", shirt: "#456b58",
@@ -47,7 +47,6 @@ export const PovPrototype: React.FC = () => {
  const scene=sec<12?0:sec<22?1:sec<32?2:sec<47?3:sec<60?4:sec<73?5:6;
  const local=sec-[0,12,22,32,47,60,73][scene];
  const shake=scene===2||scene===3?Math.sin(f*.17)*7:0;
- const fade=interpolate(f%30,[0,8,30],[0,1,1],{extrapolateRight:"clamp"});
  const bg = scene<=1 ? "#d8c4a5" : scene===2 ? "#9db9b6" : scene<=4 ? "#b7c2b5" : "#c8b49b";
  return <AbsoluteFill style={{background:bg,fontFamily:"Arial, sans-serif",overflow:"hidden"}}>
   <AbsoluteFill style={{transform:`translateX(${shake}px)`}}>
