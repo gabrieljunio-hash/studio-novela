@@ -1,0 +1,34 @@
+{
+  "duration_seconds": 90,
+  "language": "pt-BR",
+  "voices": {
+    "father_narrator": "pt-BR-AntonioNeural",
+    "father_dialogue": "pt-BR-AntonioNeural",
+    "mother": "pt-BR-FranciscaNeural",
+    "teen_son": "pt-BR-DonatoNeural",
+    "ze": "pt-BR-AntonioNeural",
+    "foreman": "pt-BR-FabioNeural",
+    "worker": "pt-BR-ThalitaNeural"
+  },
+  "lines": [
+    {"id":"01","voice":"father_narrator","start":0.4,"text":"Aquele era o último ovo de casa. Eu olhei pro meu filho e pensei: hoje eu preciso voltar com algum dinheiro. De qualquer jeito."},
+    {"id":"02","voice":"mother","start":12.3,"text":"Vai com Deus. E vê se come alguma coisa."},
+    {"id":"03","voice":"teen_son","start":16.1,"text":"Pai, hoje você vai conseguir, né?"},
+    {"id":"04","voice":"father_narrator","start":18.6,"text":"Eu falei que sim. Mesmo sem saber."},
+    {"id":"05","voice":"father_narrator","start":22.2,"text":"Fui andando até a obra. A passagem de ônibus já era dinheiro que eu não podia gastar."},
+    {"id":"06","voice":"foreman","start":32.5,"text":"Já trabalhou em obra?"},
+    {"id":"07","voice":"father_dialogue","start":35.0,"text":"De ajudante, sim. Aprendo rápido."},
+    {"id":"08","voice":"foreman","start":38.0,"text":"Então pega aquela pá e começa. Hoje é diária. Se render, a gente conversa."},
+    {"id":"09","voice":"father_narrator","start":43.0,"text":"Não era muito, mas já dava pra comprar a janta."},
+    {"id":"10","voice":"ze","start":47.2,"text":"Ô novato, isso aí não é decoração não! É pra deixar do lado de cá!"},
+    {"id":"11","voice":"father_dialogue","start":52.0,"text":"Foi mal, chefe."},
+    {"id":"12","voice":"ze","start":54.0,"text":"Chefe é meu joelho. Me chama de Zé."},
+    {"id":"13","voice":"ze","start":60.2,"text":"Cadê minha marmita?"},
+    {"id":"14","voice":"worker","start":63.0,"text":"Ué, não tava aqui?"},
+    {"id":"15","voice":"ze","start":65.3,"text":"Foi você que pegou, novato?"},
+    {"id":"16","voice":"father_narrator","start":68.4,"text":"Eu nem tinha terminado de abrir a minha."},
+    {"id":"17","voice":"ze","start":73.2,"text":"Abre essa mochila. Agora."},
+    {"id":"18","voice":"father_narrator","start":76.0,"text":"Se eu discutisse, podia perder a diária. Se ficasse quieto, ia sair dali como ladrão. E em casa estavam contando comigo."},
+    {"id":"19","voice":"father_narrator","start":83.2,"text":"E você? Enfrentava o Zé ou ficava quieto pra não perder o emprego?"}
+  ]
+}
