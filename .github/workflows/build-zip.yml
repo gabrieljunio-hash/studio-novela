@@ -43,7 +43,12 @@ jobs:
       - name: Gerar vozes do episódio 1
         run: python scripts/generate_voices.py
 
-      - name: Renderizar protótipo atual
+      - name: Preparar áudio para o Remotion
+        run: |
+          mkdir -p public
+          cp out/ep001-voices.wav public/ep001-voices.wav
+
+      - name: Renderizar episódio 2D de 90 segundos
         run: npm run render
 
       - name: Gerar ZIP do projeto
