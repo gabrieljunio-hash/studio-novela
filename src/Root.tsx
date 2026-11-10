@@ -6,7 +6,7 @@ export const Root: React.FC = () => (
   <Composition
     id="PovPrototype"
     component={PovPrototype}
-    durationInFrames={360}
+    durationInFrames={2700}
     fps={30}
     width={1080}
     height={1920}
