@@ -11,7 +11,7 @@ permissions:
 jobs:
   validate-render-package:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - name: Baixar projeto
         uses: actions/checkout@v4
@@ -21,28 +21,46 @@ jobs:
         with:
           node-version: 20
 
-      - name: Instalar dependências
-        run: npm install
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Instalar dependências do projeto
+        run: |
+          npm install
+          python -m pip install --upgrade pip
+          python -m pip install edge-tts
 
       - name: Verificar TypeScript
         run: npm run check
 
-      - name: Renderizar protótipo
+      - name: Gerar vozes do episódio 1
+        run: python scripts/generate_voices.py
+
+      - name: Renderizar protótipo atual
         run: npm run render
 
       - name: Gerar ZIP do projeto
         if: success()
         run: |
           mkdir -p dist
-          zip -r dist/studio-novela-v0.2.zip . \
+          zip -r dist/studio-novela-v0.3.zip . \
             -x ".git/*" "node_modules/*" "dist/*" "out/*"
 
-      - name: Guardar ZIP e vídeo renderizado
+      - name: Guardar ZIP, vídeo e vozes
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: studio-novela-prototipo-v0.2
+          name: studio-novela-ep001-audio-v0.3
           path: |
-            dist/studio-novela-v0.2.zip
+            dist/studio-novela-v0.3.zip
             out/prototipo-pov.mp4
+            out/ep001-voices.wav
+            out/voices/*.mp3
           retention-days: 30
