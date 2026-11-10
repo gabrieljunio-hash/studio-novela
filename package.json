@@ -1,0 +1,21 @@
+{
+  "name": "studio-novela",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts PovPrototype out/prototipo-pov.mp4",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.300",
+    "remotion": "4.0.300",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/node": "22.10.2",
+    "typescript": "5.7.2"
+  }
+}
