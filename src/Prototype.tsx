@@ -7,6 +7,9 @@ const shirt = "#496b58";
 
 const Hand: React.FC<{x:number;y:number;rotate:number;scale?:number}> = ({x,y,rotate,scale=1}) => (
   <g transform={`translate(${x} ${y}) rotate(${rotate}) scale(${scale})`}>
+    <path d="M14 220 Q8 330 0 470 L-12 620 Q70 650 145 615 L130 470 Q120 340 105 220 Z" fill={skin} stroke={ink} strokeWidth="9" strokeLinejoin="round"/>
+    <path d="M-8 500 Q62 530 137 495 L145 615 Q70 650 -12 620 Z" fill={shirt} stroke={ink} strokeWidth="9" strokeLinejoin="round"/>
+    <path d="M14 220 Q8 330 0 470 L-12 620 Q70 650 145 615 L130 470 Q120 340 105 220 Z" fill="none" stroke={ink} strokeWidth="9" strokeLinejoin="round"/>
     <path d="M0 260 Q-20 150 4 82 Q12 52 35 60 L42 150 L50 22 Q54 -2 73 2 Q92 5 88 30 L82 145 L99 35 Q104 12 123 18 Q141 23 134 48 L119 155 L145 75 Q154 54 171 65 Q187 75 175 101 L148 195 Q133 250 91 276 Z" fill={skin} stroke={ink} strokeWidth="9" strokeLinejoin="round"/>
     <path d="M5 245 Q65 265 111 242" fill="none" stroke="#754733" strokeWidth="8" strokeLinecap="round"/>
   </g>
