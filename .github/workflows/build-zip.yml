@@ -1,0 +1,27 @@
+name: Build Studio ZIP
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar projeto
+        uses: actions/checkout@v4
+      - name: Gerar ZIP
+        run: |
+          mkdir -p dist
+          zip -r dist/studio-novela-v0.2.zip . \
+            -x ".git/*" "node_modules/*" "dist/*"
+      - name: Publicar ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: studio-novela-v0.2
+          path: dist/studio-novela-v0.2.zip
+          retention-days: 30
